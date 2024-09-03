@@ -1,17 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from "react";
+import { Button } from "./components/ui/button";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      </>
-  )
+    <div className="flex w-full h-screen items-center justify-center">
+      <Button onClick={() => setCount(count + 1)}>Click me {count}</Button>
+    </div>
+  );
 }
 
-export default App
+export default App;
